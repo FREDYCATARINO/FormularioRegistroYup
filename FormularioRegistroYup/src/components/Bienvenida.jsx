@@ -10,6 +10,7 @@ export default function Bienvenida() {
     <div className="bienvenida-container">
       <h2>Bienvenido, {usuario?.nombre}!</h2>
       <p>Apellidos: {usuario?.apellidos}</p>
+      <p>Correo: {usuario?.correo}</p>
       <p>Edad: {usuario?.edad}</p>
       <p>Teléfono: {usuario?.telefono}</p>
       <button onClick={() => navigate("/")}>Cerrar Sesión</button>

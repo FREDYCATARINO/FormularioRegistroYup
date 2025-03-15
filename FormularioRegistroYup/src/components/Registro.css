@@ -1,0 +1,96 @@
+/* Contenedor principal */
+.registro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  margin: 2rem;
+  box-sizing: border-box;
+}
+
+/* Estilos para el formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 300px;
+}
+
+/* Estilo para los campos de entrada */
+input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid rgba(160, 160, 160, 0.37);
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  background: white;
+  color: black;
+}
+
+/* Placeholder estilizado */
+input::placeholder {
+  color: gray;
+  font-style: italic;
+}
+
+/* Efecto en focus */
+input:focus {
+  border-color: #007bff;
+}
+
+/* Mensajes de error */
+p {
+  color: red;
+  font-size: 14px;
+  text-align: left;
+  width: 100%;
+  margin: 0;
+}
+
+/* Botón principal */
+button {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: black;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 10px;
+  width: 100%;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  background: cornsilk !important;
+}
+
+button:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+button:hover {
+  background: lightcyan !important;
+}
+
+/* Botón para ir al login */
+button:last-of-type {
+  background: #e0e0e0 !important;
+  border-radius: 30px;
+  box-shadow: 4px 4px 5px #bebebe, -4px -4px 5px #ffffff !important;
+  border: none;
+  height: 50px;
+  width: 150px;
+  font-weight: bold;
+}
+
+button:last-of-type:active {
+  box-shadow: inset 4px 4px 5px #bebebe, inset -4px -4px 5px #ffffff !important;
+}
+
+/* Encabezado */
+h2 {
+  text-shadow: 0 0 10px darkcyan, 0 0 20px darkcyan, 0 0 40px darkcyan, 0 0 80px darkcyan;
+}

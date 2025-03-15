@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Registro from "./components/Registro";
 import Login from "./components/Login";
 import Bienvenida from "./components/Bienvenida";
-import "./styles/App.css";
+import "./App.css";
 
 function App() {
   return (

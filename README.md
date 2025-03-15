@@ -6,5 +6,4 @@ Proyecto profe eliel
 ✔npm install react-hook-form
 ✔npm install @hookform/resolvers
 ✔npm install yup
-✔npm install react-router-dom
 

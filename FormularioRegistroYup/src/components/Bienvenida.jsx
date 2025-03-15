@@ -8,22 +8,12 @@ export default function Bienvenida() {
 
   return (
     <div className="bienvenida-container">
-      <h1>¡Bienvenido, {usuario?.nombre}!</h1>
-      <p>
-        <span className="wave">Apellidos:</span> {usuario?.apellidos}
-      </p>
-      <p>
-        <span className="wave">Correo:</span> {usuario?.correo}
-      </p>
-      <p>
-        <span className="wave">Edad:</span> {usuario?.edad}
-      </p>
-      <p>
-        <span className="wave">Teléfono:</span> {usuario?.telefono}
-      </p>
-      <button className="leavebutton" onClick={() => navigate("/")}>
-        Cerrar Sesión
-      </button>
+      <h2>Bienvenido, {usuario?.nombre}!</h2>
+      <p>Apellidos: {usuario?.apellidos}</p>
+      <p>Correo: {usuario?.correo}</p>
+      <p>Edad: {usuario?.edad}</p>
+      <p>Teléfono: {usuario?.telefono}</p>
+      <button onClick={() => navigate("/")}>Cerrar Sesión</button>
     </div>
   );
 }

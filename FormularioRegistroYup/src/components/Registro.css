@@ -1,133 +1,96 @@
+/* Contenedor principal */
 .registro-container {
-  gap: 2em;
-}
-
-.signup {
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  margin: 1rem;
+  align-items: center;
+  gap: 2em;
+  margin: 2rem;
   box-sizing: border-box;
 }
 
-.backbutton {
-  width: 150px;
-  height: 50px;
-  background: #e0e0e0 !important;
-  border-radius: 30px;
-  box-shadow: 4px 4px 5px #bebebe, -4px -4px 5px #ffffff !important;
-  border: none;
-  cursor: pointer;
-  color: black;
-  font-weight: bold;
+/* Estilos para el formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 300px;
 }
 
-.backbutton:active {
-  box-shadow: inset 4px 4px 5px #bebebe, inset -4px -4px 5px #ffffff !important;
-}
-
-.input-container {
-  position: relative;
-  width: 250px;
-  font-family: Arial, sans-serif;
-}
-
-.input-container input {
-  width: 90%;
+/* Estilo para los campos de entrada */
+input {
+  width: 100%;
   padding: 10px;
   border: 2px solid rgba(160, 160, 160, 0.37);
   border-radius: 5px;
   outline: none;
   font-size: 16px;
   transition: border-color 0.3s;
-  /* background: rgba(160, 160, 160, 0.5) */
   background: white;
   color: black;
 }
 
-.input-container label {
-  position: absolute;
-  top: 25%;
-  left: 4%;
-  background: local;
-  transform: rotateY(20px);
-  padding: 0px 5px;
-  transition: transform 0.3s ease, color 0.3s ease;
-  pointer-events: none;
+/* Placeholder estilizado */
+input::placeholder {
   color: gray;
+  font-style: italic;
 }
 
-.input-container input:focus + label {
-  transform: translateY(-16px);
-  font-size: 12px;
-  color: #007bff;
-  background: white;
-  border-radius: 5px;
-}
-
-.input-container input:not(:placeholder-shown) + label {
-  transform: translateY(-16px);
-  font-size: 12px;
-  color: #007bff;
-}
-
-.input-container input:focus {
+/* Efecto en focus */
+input:focus {
   border-color: #007bff;
 }
 
-.input-container input:not(:focus)::placeholder {
-  color: white;
-}
-
+/* Mensajes de error */
 p {
   color: red;
-  align-items: start;
-  max-width: 250px;
-  height: 30px;
+  font-size: 14px;
+  text-align: left;
+  width: 100%;
   margin: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
-h1 {
-  text-shadow: 0 0 10px darkcyan, 0 0 20px darkcyan, 0 0 40px darkcyan,
-    0 0 80px darkcyan;
-}
-
-.button-54 {
+/* Botón principal */
+button {
   font-family: "Open Sans", sans-serif;
-  margin-top: 10px;
-  max-width: 250px;
   font-size: 16px;
   letter-spacing: 2px;
-  text-decoration: none;
   text-transform: uppercase;
-  color: #000;
+  color: black;
   cursor: pointer;
   border: 3px solid;
-  padding: 0.25em 0.5em;
-  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px,
-    5px 5px 0px 0px;
-  position: relative;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  background:cornsilk !important;
+  padding: 10px;
+  width: 100%;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  background: cornsilk !important;
 }
 
-.button-54:active {
+button:active {
   box-shadow: 0px 0px 0px 0px;
   top: 5px;
   left: 5px;
 }
 
-.button-54:hover{
-    background: lightcyan !important;
+button:hover {
+  background: lightcyan !important;
 }
 
-@media (min-width: 768px) {
-  .button-54 {
-    padding: 0.25em 0.75em;
-  }
+/* Botón para ir al login */
+button:last-of-type {
+  background: #e0e0e0 !important;
+  border-radius: 30px;
+  box-shadow: 4px 4px 5px #bebebe, -4px -4px 5px #ffffff !important;
+  border: none;
+  height: 50px;
+  width: 150px;
+  font-weight: bold;
+}
+
+button:last-of-type:active {
+  box-shadow: inset 4px 4px 5px #bebebe, inset -4px -4px 5px #ffffff !important;
+}
+
+/* Encabezado */
+h2 {
+  text-shadow: 0 0 10px darkcyan, 0 0 20px darkcyan, 0 0 40px darkcyan, 0 0 80px darkcyan;
 }

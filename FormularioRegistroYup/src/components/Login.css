@@ -1,17 +1,61 @@
+/* Contenedor principal */
 .login-container {
-  gap: 2em;
-}
-
-.login {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  margin: 1rem;
-  box-sizing: border-box;
   align-items: center;
+  gap: 2em;
+  margin: 2rem;
+  box-sizing: border-box;
 }
 
-.logbutton {
+/* Estilo del formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 300px;
+}
+
+/* Estilos para los campos de entrada */
+input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid rgba(160, 160, 160, 0.37);
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  background: white;
+  color: black;
+}
+
+/* Placeholder estilizado */
+input::placeholder {
+  color: gray;
+  font-style: italic;
+}
+
+/* Efecto en focus */
+input:focus {
+  border-color: #007bff;
+}
+
+/* Mensaje de error */
+.error {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 5px;
+  max-width: 250px;
+  height: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Botón de login */
+button {
   width: 150px;
   height: 50px;
   background: #e0e0e0 !important;
@@ -21,62 +65,18 @@
   cursor: pointer;
   color: black;
   font-weight: bold;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 
-.logbutton:active {
+/* Efecto de botón presionado */
+button:active {
   box-shadow: inset 4px 4px 5px #bebebe, inset -4px -4px 5px #ffffff !important;
 }
 
-.input-container {
-  position: relative;
-  width: 250px;
-  font-family: Arial, sans-serif;
-}
-
-.input-container input {
-  width: 90%;
-  padding: 10px;
-  border: 2px solid rgba(160, 160, 160, 0.37);
-  border-radius: 5px;
-  outline: none;
-  font-size: 16px;
-  transition: border-color 0.3s;
-  /* background: rgba(160, 160, 160, 0.5) */
-  background: white;
-  color: black;
-}
-
-.input-container label {
-  position: absolute;
-  top: 25%;
-  left: 4%;
-  background: local;
-  transform: rotateY(20px);
-  padding: 0px 5px;
-  transition: transform 0.3s ease, color 0.3s ease;
-  pointer-events: none;
+/* Efecto cuando el botón está deshabilitado */
+button:disabled {
+  background: #ccc !important;
+  cursor: not-allowed;
+  box-shadow: none;
   color: gray;
-}
-
-.input-container input:focus + label {
-  transform: translateY(-16px);
-  font-size: 12px;
-  color: #007bff;
-  background: white;
-  border-radius: 5px;
-}
-
-.input-container input:not(:placeholder-shown) + label {
-  transform: translateY(-16px);
-  font-size: 12px;
-  color: #007bff;
-}
-
-.input-container input:focus {
-  border-color: #007bff;
-}
-
-.input-container input:not(:focus)::placeholder {
-  color: white;
 }

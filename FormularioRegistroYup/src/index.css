@@ -35,7 +35,7 @@ h1 {
   line-height: 1.1;
 }
 
-button:not(.backbutton .button-54){
+/* button:not(.backbutton .button-54 .logbutton){
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -46,13 +46,13 @@ button:not(.backbutton .button-54){
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:not(.backbutton .button-54):hover {
+button:not(.backbutton .button-54 .logbutton):hover {
   border-color: #646cff;
 }
-button:not(.backbutton .button-54):focus,
-button:not(.backbutton .button-54):focus-visible {
+button:not(.backbutton .button-54 .logbutton):focus,
+button:not(.backbutton .button-54 .logbutton):focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
+} */
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -62,7 +62,7 @@ button:not(.backbutton .button-54):focus-visible {
   a:hover {
     color: #747bff;
   }
-  button {
+  button:not(.backbutton .button-54 .logbutton) {
     background-color: #f9f9f9;
   }
 }

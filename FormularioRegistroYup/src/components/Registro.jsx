@@ -127,7 +127,7 @@ export default function Registro() {
         {!errors.confirmPassword ? null : (
           <p>{errors.confirmPassword?.message}</p>
         )}
-        <button type="submit" class="button-54">Registrarse</button>
+        <button type="submit" className="button-54">Registrarse</button>
       </form>
 
       <button onClick={goToLogin} className="backbutton">

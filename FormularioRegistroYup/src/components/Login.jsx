@@ -13,9 +13,17 @@ export default function Login() {
     const email = e.target.email.value;
     const password = e.target.password.value;
 
-    if (!usuarioGuardado || usuarioGuardado.telefono !== email || usuarioGuardado.password !== password) {
-      setIntentos(prev => prev - 1);
-      setError(intentos > 1 ? `Credenciales incorrectas. Te quedan ${intentos - 1} intentos.` : "Acceso bloqueado temporalmente.");
+    if (
+      !usuarioGuardado ||
+      usuarioGuardado.telefono !== email ||
+      usuarioGuardado.password !== password
+    ) {
+      setIntentos((prev) => prev - 1);
+      setError(
+        intentos > 1
+          ? `Credenciales incorrectas. Te quedan ${intentos - 1} intentos.`
+          : "Acceso bloqueado temporalmente."
+      );
       return;
     }
 
@@ -24,13 +32,31 @@ export default function Login() {
 
   return (
     <div className="login-container">
-      <h2>Iniciar Sesión</h2>
-      <form onSubmit={handleLogin}>
-        <input type="text" name="email" placeholder="Teléfono registrado" required />
-        <input type="password" name="password" placeholder="Contraseña" required />
-        <button type="submit" disabled={intentos <= 0}>Ingresar</button>
+      <form onSubmit={handleLogin} className="login">
+        <h1>Iniciar Sesión</h1>
+        <div className="input-container">
+          <input
+            type="text"
+            name="email"
+            placeholder="Teléfono registrado"
+            required
+          />
+          <label>Teléfono</label>
+        </div>
+        <div className="input-container">
+          <input
+            type="password"
+            name="password"
+            placeholder="Contraseña"
+            required
+          />
+          <label>Contraseña</label>
+        </div>
+        <button type="submit" disabled={intentos <= 0} className="logbutton">
+          Ingresar
+        </button>
       </form>
       <p className="error">{error}</p>
-      </div>
-      );
+    </div>
+  );
 }

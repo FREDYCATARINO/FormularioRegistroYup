@@ -27,8 +27,24 @@ export default function Login() {
     const email = e.target.email.value;
     const password = e.target.password.value;
 
+<<<<<<< HEAD
     try {
       await schema.validate({ email, password });
+=======
+    if (
+      !usuarioGuardado ||
+      usuarioGuardado.telefono !== email ||
+      usuarioGuardado.password !== password
+    ) {
+      setIntentos((prev) => prev - 1);
+      setError(
+        intentos > 1
+          ? `Credenciales incorrectas. Te quedan ${intentos - 1} intentos.`
+          : "Acceso bloqueado temporalmente."
+      );
+      return;
+    }
+>>>>>>> b6378eadbf9bb18e8b6cef73c6711f14b0c0f79c
 
       if (!usuarioGuardado || usuarioGuardado.correo !== email || usuarioGuardado.password !== password) {
         setIntentos((prev) => prev - 1);
@@ -44,11 +60,37 @@ export default function Login() {
 
   return (
     <div className="login-container">
+<<<<<<< HEAD
       <h2>Iniciar Sesión</h2>
       <form onSubmit={handleLogin}>
         <input type="email" name="email" placeholder="Ingresa tu correo" required />
         <input type="password" name="password" placeholder="Contraseña" required />
         <button type="submit" disabled={intentos <= 0}>Ingresar</button>
+=======
+      <form onSubmit={handleLogin} className="login">
+        <h1>Iniciar Sesión</h1>
+        <div className="input-container">
+          <input
+            type="text"
+            name="email"
+            placeholder="Teléfono registrado"
+            required
+          />
+          <label>Teléfono</label>
+        </div>
+        <div className="input-container">
+          <input
+            type="password"
+            name="password"
+            placeholder="Contraseña"
+            required
+          />
+          <label>Contraseña</label>
+        </div>
+        <button type="submit" disabled={intentos <= 0} className="logbutton">
+          Ingresar
+        </button>
+>>>>>>> b6378eadbf9bb18e8b6cef73c6711f14b0c0f79c
       </form>
       <p className="error">{error}</p>
     </div>
